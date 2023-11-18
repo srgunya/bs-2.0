@@ -1,0 +1,330 @@
+@font-face {
+  font-family: Graphik;
+  src: url(../../fonts/Graphik.woff); }
+body {
+  margin: 0; }
+  body * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Graphik;
+    font-size: 0.9216589862vw; }
+  body li {
+    list-style-type: none; }
+  body a {
+    color: black;
+    text-decoration: none; }
+
+.shadow-white {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0;
+  transition: opacity .3s ease; }
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2; }
+
+.headerSale {
+  background-color: #191919;
+  width: 100%;
+  height: 2.1066491113vw;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; }
+
+.headerSale__link {
+  color: #e84424;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.7899934167vw;
+  letter-spacing: 0.0658327847vw; }
+
+.headerCont {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 0 3.2916392363vw;
+  height: 4.9374588545vw;
+  position: relative;
+  background-color: white; }
+
+.headerLogo {
+  width: 2.3699802502vw;
+  height: 2.896642528vw;
+  margin-right: 1.1849901251vw; }
+
+.headerLogo__img {
+  width: 100%;
+  height: 100%;
+  background-image: url(../../img/header/logo.svg);
+  background-size: 100% 100%;
+  cursor: pointer; }
+
+.headerNav {
+  height: 100%; }
+
+.headerNav__ul {
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap; }
+
+.headerNav__li {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 1.3166556945vw;
+  transition: background-color .3s ease; }
+
+.headerNav__li_hover {
+  background-color: rgba(0, 0, 0, 0.05); }
+
+.headerIcon {
+  display: flex;
+  flex-flow: row nowrap;
+  position: absolute;
+  right: 3.2916392363vw; }
+
+.headerIcon__block {
+  width: 3.2916392363vw;
+  height: 3.2916392363vw;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  transition: background-color .3s ease;
+  cursor: pointer;
+  border-radius: 0.2633311389vw; }
+  .headerIcon__block:hover {
+    background-color: rgba(0, 0, 0, 0.05); }
+
+.headerIcon__block:nth-child(1) .headerIcon__img {
+  width: 1.5141540487vw;
+  height: 1.5141540487vw;
+  background-image: url(../../img/header/star.png);
+  background-size: 100% 100%; }
+
+.headerIcon__block:nth-child(2) .headerIcon__img {
+  width: 1.5141540487vw;
+  height: 1.5141540487vw;
+  background-image: url(../../img/header/lupa.png);
+  background-size: 100% 100%; }
+
+.headerIcon__block:nth-child(3) .headerIcon__img {
+  width: 1.5141540487vw;
+  height: 1.5141540487vw;
+  background-image: url(../../img/header/bag.png);
+  background-size: 100% 100%; }
+
+.headerIcon__block:nth-child(4) .headerIcon__img {
+  width: 1.6458196182vw;
+  height: 1.6458196182vw;
+  background-image: url(../../img/header/user.png);
+  background-size: 100% 100%; }
+
+.menu {
+  position: fixed;
+  top: 7.702435813vw;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: top .15s ease, opacity .3s ease; }
+
+.menu_opacity-1 {
+  top: 7.0441079658vw;
+  opacity: 1; }
+
+.menuCont {
+  padding: 1.3166556945vw 3.2916392363vw 1.3166556945vw 8.1632653061vw;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  box-shadow: 0 2.3041474654vw 3.2916392363vw -0.6583278473vw rgba(0, 0, 0, 0.3);
+  position: absolute;
+  width: 100%;
+  background-color: white; }
+
+.menuCont_display-none {
+  display: none; }
+
+.menuCont__ul {
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: flex-start;
+  align-items: flex-start; }
+
+.menuCont__ul_marginTop {
+  margin-top: 2.8439763002vw; }
+
+.menuCont__li {
+  cursor: pointer; }
+  .menuCont__li:hover .menuCont__link {
+    width: 100%; }
+
+.menuCont__li_zaglavnaya {
+  text-transform: uppercase;
+  margin-bottom: 1.7774851876vw; }
+  .menuCont__li_zaglavnaya:hover .menuCont__link {
+    color: black; }
+  .menuCont__li_zaglavnaya .menuCont__link {
+    line-height: inherit;
+    color: rgba(0, 0, 0, 0.4);
+    letter-spacing: 0.1053324556vw;
+    font-size: 0.7899934167vw;
+    border-bottom: 1px solid black;
+    transition: color .3s ease, width .3s ease; }
+
+.menuCont__link {
+  line-height: 1.9749835418vw;
+  white-space: nowrap;
+  display: inline-block;
+  width: 0%;
+  border-bottom: 2px solid black;
+  transition: width .3s ease; }
+
+.menuContImg {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: space-between;
+  width: 45.5562870309vw;
+  height: 30.9414088216vw; }
+
+.menuContImg_width-mini {
+  width: 22.1198156682vw; }
+
+.menuContImg__block {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  cursor: pointer;
+  position: relative; }
+  .menuContImg__block:hover .menuContImg__shadow {
+    opacity: .2; }
+
+.menuContImg__img {
+  width: 22.1198156682vw;
+  height: 12.4423963134vw;
+  background-size: 100% 100%;
+  border-radius: 0.2633311389vw; }
+
+.menuContImg__img_size-big {
+  width: 22.1198156682vw;
+  height: 28.3080974325vw; }
+
+.menuContImg__img_bcImg-saucony {
+  background-image: url(../../img/menu/saucony.jpg); }
+
+.menuContImg__img_bcImg-reebok {
+  background-image: url(../../img/menu/reebok.jpg); }
+
+.menuContImg__img_bcImg-alpha {
+  background-image: url(../../img/menu/alpha.jpg); }
+
+.menuContImg__img_bcImg-cp {
+  background-image: url(../../img/menu/cp_company.jpg); }
+
+.menuContImg__img_bcImg-tnf {
+  background-image: url(../../img/menu/tnf.jpg); }
+
+.menuContImg__img_bcImg-lacoste {
+  background-image: url(../../img/menu/lacoste.jpg); }
+
+.menuContImg__img_bcImg-menClo {
+  background-image: url(../../img/menu/mens_clothing.jpg); }
+
+.menuContImg__img_bcImg-menFoot {
+  background-image: url(../../img/menu/mens_footwear.jpg); }
+
+.menuContImg__img_bcImg-womFoot {
+  background-image: url(../../img/menu/women_footwear.jpg); }
+
+.menuContImg__img_bcImg-womClo {
+  background-image: url(../../img/menu/woomen_clothing.jpg); }
+
+.menuContImg__img_bcImg-glas {
+  background-image: url(../../img/menu/glasses.jpg); }
+
+.menuContImg__img_bcImg-watch {
+  background-image: url(../../img/menu/watch.jpg); }
+
+.menuContImg__img_bcImg-bags {
+  background-image: url(../../img/menu/bags.jpg); }
+
+.menuContImg__img_bcImg-panama {
+  background-image: url(../../img/menu/panama.jpg); }
+
+.menuContImg__img_bcImg-saleAcc {
+  background-image: url(../../img/menu/accessories.jpg); }
+
+.menuContImg__img_bcImg-saleWom {
+  background-image: url(../../img/menu/women.jpg); }
+
+.menuContImg__img_bcImg-saleFoot {
+  background-image: url(../../img/menu/shoes.jpg); }
+
+.menuContImg__img_bcImg-saleMen {
+  background-image: url(../../img/menu/men.jpg); }
+
+.menuContImg__link {
+  text-transform: uppercase;
+  font-size: 0.7899934167vw;
+  letter-spacing: 0.1053324556vw;
+  margin-top: 0.9216589862vw; }
+
+.sex {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 0 50px;
+  margin-top: 8.3607636603vw; }
+
+.sex__block {
+  position: relative;
+  cursor: pointer;
+  width: 45.5562870309vw;
+  height: 48.9795918367vw; }
+
+.sex__img {
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  border-radius: 0.2633311389vw;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-end; }
+
+.sex__img_bc-men {
+  background-image: url(../../img/index/men_home.jpg); }
+
+.sex__img_bc-woomen {
+  background-image: url(../../img/index/women_home.jpg); }
+
+.sex__button {
+  margin: 0 0 1.2179065174vw;
+  width: 43.4496379197vw;
+  height: 3.1599736669vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.2633311389vw;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px); }
+
+.sex__link {
+  font-size: 1.1849901251vw; }
+
+/*# sourceMappingURL=style.css.map */

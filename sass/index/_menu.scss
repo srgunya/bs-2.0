@@ -1,0 +1,198 @@
+.menu {
+    position: fixed;
+    top: w(117px);
+    width: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: top .15s ease, opacity .3s ease;
+}
+
+.menu_opacity-1 {
+    top: w(107px);
+    opacity: 1;
+}
+
+.menuCont {
+    padding: w(20px) w(50px) w(20px) w(124px);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    box-shadow: 0 w(35px) w(50px) w(-10px) rgba(0, 0, 0, .3);
+    position: absolute;
+    width: 100%;
+    background-color: white;
+}
+
+.menuCont_display-none {
+    display: none;
+}
+
+.menuCont__ul {
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+.menuCont__ul_marginTop {
+    margin-top: w(43.2px);
+}
+
+.menuCont__li {
+    cursor: pointer;
+
+    &:hover {
+        .menuCont__link {
+            width: 100%;
+        }
+    }
+}
+
+.menuCont__li_zaglavnaya {
+    text-transform: uppercase;
+    margin-bottom: w(27px);
+
+    &:hover {
+        .menuCont__link {
+            color: black;
+        }
+    }
+
+    .menuCont__link {
+        line-height: inherit;
+        color: rgba(0, 0, 0, .4);
+        letter-spacing: w(1.6px);
+        font-size: w(12px);
+        border-bottom: 1px solid black;
+        transition: color .3s ease, width .3s ease;
+
+    }
+}
+
+.menuCont__link {
+    line-height: w(30px);
+    white-space: nowrap;
+    display: inline-block;
+    width: 0%;
+    border-bottom: 2px solid black;
+    transition: width .3s ease;
+}
+
+.menuContImg {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: space-between;
+    width: w(692px);
+    height: w(470px);
+}
+
+.menuContImg_width-mini {
+    width: w(336px);
+}
+
+.menuContImg__block {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+        .menuContImg__shadow {
+            opacity: .2;
+        }
+    }
+}
+
+.menuContImg__img {
+    width: w(336px);
+    height: w(189px);
+    background-size: 100% 100%;
+    border-radius: w(4px);
+}
+
+.menuContImg__img_size-big {
+    width: w(336px);
+    height: w(430px);
+}
+
+.menuContImg__img_bcImg-saucony {
+    background-image: url(../../img/menu/saucony.jpg);
+}
+
+.menuContImg__img_bcImg-reebok {
+    background-image: url(../../img/menu/reebok.jpg);
+}
+
+.menuContImg__img_bcImg-alpha {
+    background-image: url(../../img/menu/alpha.jpg);
+}
+
+.menuContImg__img_bcImg-cp {
+    background-image: url(../../img/menu/cp_company.jpg);
+}
+
+.menuContImg__img_bcImg-tnf {
+    background-image: url(../../img/menu/tnf.jpg);
+}
+
+.menuContImg__img_bcImg-lacoste {
+    background-image: url(../../img/menu/lacoste.jpg);
+}
+
+.menuContImg__img_bcImg-menClo {
+    background-image: url(../../img/menu/mens_clothing.jpg);
+}
+
+.menuContImg__img_bcImg-menFoot {
+    background-image: url(../../img/menu/mens_footwear.jpg);
+}
+
+.menuContImg__img_bcImg-womFoot {
+    background-image: url(../../img/menu/women_footwear.jpg);
+}
+
+.menuContImg__img_bcImg-womClo {
+    background-image: url(../../img/menu/woomen_clothing.jpg);
+}
+
+.menuContImg__img_bcImg-glas {
+    background-image: url(../../img/menu/glasses.jpg);
+}
+
+.menuContImg__img_bcImg-watch {
+    background-image: url(../../img/menu/watch.jpg);
+}
+
+.menuContImg__img_bcImg-bags {
+    background-image: url(../../img/menu/bags.jpg);
+}
+
+.menuContImg__img_bcImg-panama {
+    background-image: url(../../img/menu/panama.jpg);
+}
+
+.menuContImg__img_bcImg-saleAcc {
+    background-image: url(../../img/menu/accessories.jpg);
+}
+
+.menuContImg__img_bcImg-saleWom {
+    background-image: url(../../img/menu/women.jpg);
+}
+
+.menuContImg__img_bcImg-saleFoot {
+    background-image: url(../../img/menu/shoes.jpg);
+}
+
+.menuContImg__img_bcImg-saleMen {
+    background-image: url(../../img/menu/men.jpg);
+}
+
+
+.menuContImg__link {
+    text-transform: uppercase;
+    font-size: w(12px);
+    letter-spacing: w(1.6px);
+    margin-top: w(14px);
+}
