@@ -29,3 +29,21 @@ body {
     opacity: 0;
     transition: opacity .3s ease;
 }
+
+.link_anim {
+    line-height: w(25px);
+    display: flex;
+    width: 0;
+    border-bottom: w(1px) solid black;
+    transition: width .3s ease, color .3s ease;
+    white-space: nowrap;
+
+    &:hover {
+        width: 100%;
+        color: black;
+    }
+}
+
+.display0 {
+    display: none !important;
+}

@@ -13,12 +13,19 @@ function openMenu() {
 
         headerNav__li[i].onmouseleave = (el) => {
             if (el.target === headerNav__li[i] && el.relatedTarget === menuCont[i]) {
-                return
+                return false
             }
+            if (event.relatedTarget == document.getElementsByTagName('html')[0]) {
+                return false
+            }
+
             closeMenu(i, el)
         }
 
         menuCont[i].onmouseleave = (el) => {
+            if (event.relatedTarget == document.getElementsByTagName('html')[0]) {
+                return false
+            }
             closeMenu(i, el)
         }
 
@@ -28,7 +35,12 @@ function openMenu() {
         headerNav__li[i].classList.remove('headerNav__li_hover');
         if (!el.relatedTarget.classList.contains('headerNav__li')) {
             menu.classList.remove('menu_opacity-1');
-            setTimeout(() => menuCont[i].classList.add('menuCont_display-none'), 300)
+            setTimeout(() => {
+                if (!menu.classList.contains('menu_opacity-1')) {
+                    menuCont[i].classList.add('menuCont_display-none')
+                }
+
+            }, 300)
         } else {
             menuCont[i].classList.add('menuCont_display-none');
         }

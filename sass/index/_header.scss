@@ -2,17 +2,13 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 6;
 }
 
 .headerSale {
     background-color: rgb(25, 25, 25);
     width: 100%;
     height: w(32px);
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
 }
 
@@ -22,6 +18,12 @@
     font-weight: 600;
     font-size: w(12px);
     letter-spacing: w(1px);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .headerCont {
@@ -35,14 +37,12 @@
 }
 
 .headerLogo {
-    width: w(36px);
-    height: w(44px);
     margin-right: w(18px);
 }
 
 .headerLogo__img {
-    width: 100%;
-    height: 100%;
+    width: w(36px);
+    height: w(44px);
     background-image: url(../../img/header/logo.svg);
     background-size: 100% 100%;
     cursor: pointer;
@@ -78,10 +78,10 @@
     flex-flow: row nowrap;
     position: absolute;
     right: w(50px);
-    ;
 }
 
 .headerIcon__block {
+    position: relative;
     width: w(50px);
     height: w(50px);
     display: flex;
@@ -97,21 +97,41 @@
     }
 }
 
+.headerIcon__block_basket {
+    &:hover {
+        .headerIcon__basket_num {
+            background-color: black;
+            color: white;
+        }
+    }
+}
+
+.headerIcon__block_star {
+    &:hover {
+        .headerIcon__star_num {
+            background-color: black;
+            color: white;
+        }
+    }
+}
+
+.headerIcon__img {
+    background-size: 100% 100%;
+}
+
 .headerIcon__block:nth-child(1) {
     .headerIcon__img {
         width: w(23px);
         height: w(23px);
         background-image: url(../../img/header/star.png);
-        background-size: 100% 100%;
     }
 }
 
 .headerIcon__block:nth-child(2) {
     .headerIcon__img {
-        width: w(23px);
-        height: w(23px);
+        width: w(26px);
+        height: w(26px);
         background-image: url(../../img/header/lupa.png);
-        background-size: 100% 100%;
     }
 }
 
@@ -120,7 +140,6 @@
         width: w(23px);
         height: w(23px);
         background-image: url(../../img/header/bag.png);
-        background-size: 100% 100%;
     }
 }
 
@@ -129,6 +148,5 @@
         width: w(25px);
         height: w(25px);
         background-image: url(../../img/header/user.png);
-        background-size: 100% 100%;
     }
 }

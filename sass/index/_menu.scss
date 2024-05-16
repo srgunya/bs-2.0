@@ -2,9 +2,9 @@
     position: fixed;
     top: w(117px);
     width: 100%;
-    z-index: 1;
+    z-index: 8;
     opacity: 0;
-    transition: top .15s ease, opacity .3s ease;
+    transition: top .2s ease, opacity .2s ease;
 }
 
 .menu_opacity-1 {
@@ -13,7 +13,7 @@
 }
 
 .menuCont {
-    padding: w(20px) w(50px) w(20px) w(124px);
+    padding: w(23px) w(50px) w(25px);
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -23,75 +23,98 @@
     background-color: white;
 }
 
+.menuCont::before {
+    content: '';
+    position: absolute;
+    top: w(-10px);
+    left: 0;
+    width: 100%;
+    height: w(10px);
+    z-index: 8;
+}
+
 .menuCont_display-none {
     display: none;
+}
+
+.menuCont__block {
+    width: 50%;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-right: w(25px);
+    padding-left: w(74px);
+}
+
+.menuCont__block_width-75 {
+    width: 75%;
 }
 
 .menuCont__ul {
     display: flex;
     flex-flow: column nowrap;
-    align-content: flex-start;
     align-items: flex-start;
+    width: 100%;
 }
 
 .menuCont__ul_marginTop {
-    margin-top: w(43.2px);
+    margin-top: w(37.8px);
 }
 
 .menuCont__li {
-    cursor: pointer;
-
-    &:hover {
-        .menuCont__link {
-            width: 100%;
-        }
-    }
-}
-
-.menuCont__li_zaglavnaya {
-    text-transform: uppercase;
-    margin-bottom: w(27px);
-
-    &:hover {
-        .menuCont__link {
-            color: black;
-        }
-    }
-
-    .menuCont__link {
-        line-height: inherit;
-        color: rgba(0, 0, 0, .4);
-        letter-spacing: w(1.6px);
-        font-size: w(12px);
-        border-bottom: 1px solid black;
-        transition: color .3s ease, width .3s ease;
-
-    }
+    height: 100%;
 }
 
 .menuCont__link {
+    cursor: pointer;
     line-height: w(30px);
     white-space: nowrap;
-    display: inline-block;
+    display: flex;
     width: 0%;
-    border-bottom: 2px solid black;
+    border-bottom: w(1px) solid black;
     transition: width .3s ease;
+
+    &:hover {
+        width: 100%;
+    }
+}
+
+.menuCont__link_zaglavnaya {
+    line-height: inherit;
+    color: rgba(0, 0, 0, .4);
+    letter-spacing: w(1.6px);
+    font-size: w(12px);
+    border-bottom: w(1px) solid black;
+    transition: color .3s ease, width .3s ease;
+    text-transform: uppercase;
+    margin-bottom: w(25px);
+
+    &:hover {
+        color: black
+    }
 }
 
 .menuContImg {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: space-between;
-    width: w(692px);
-    height: w(470px);
+    flex-flow: column nowrap;
+    width: 50%;
 }
 
-.menuContImg_width-mini {
-    width: w(336px);
+.menuContImg_width-25 {
+    width: 24%;
+}
+
+.menuContImg__row {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+}
+
+.menuContImg__row:nth-child(2) {
+    margin-top: w(25px);
 }
 
 .menuContImg__block {
+    width: 100%;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -105,94 +128,100 @@
     }
 }
 
+.menuContImg__link:nth-child(2) {
+    margin-left: w(25px);
+}
+
 .menuContImg__img {
-    width: w(336px);
+    width: 100%;
     height: w(189px);
-    background-size: 100% 100%;
+    background-size: cover;
     border-radius: w(4px);
 }
 
 .menuContImg__img_size-big {
-    width: w(336px);
     height: w(430px);
 }
 
-.menuContImg__img_bcImg-saucony {
-    background-image: url(../../img/menu/saucony.jpg);
-}
-
-.menuContImg__img_bcImg-reebok {
-    background-image: url(../../img/menu/reebok.jpg);
-}
-
-.menuContImg__img_bcImg-alpha {
-    background-image: url(../../img/menu/alpha.jpg);
-}
-
-.menuContImg__img_bcImg-cp {
-    background-image: url(../../img/menu/cp_company.jpg);
-}
-
-.menuContImg__img_bcImg-tnf {
-    background-image: url(../../img/menu/tnf.jpg);
-}
-
-.menuContImg__img_bcImg-lacoste {
-    background-image: url(../../img/menu/lacoste.jpg);
-}
-
-.menuContImg__img_bcImg-menClo {
-    background-image: url(../../img/menu/mens_clothing.jpg);
-}
-
-.menuContImg__img_bcImg-menFoot {
-    background-image: url(../../img/menu/mens_footwear.jpg);
-}
-
-.menuContImg__img_bcImg-womFoot {
-    background-image: url(../../img/menu/women_footwear.jpg);
-}
-
-.menuContImg__img_bcImg-womClo {
-    background-image: url(../../img/menu/woomen_clothing.jpg);
-}
-
-.menuContImg__img_bcImg-glas {
-    background-image: url(../../img/menu/glasses.jpg);
-}
-
-.menuContImg__img_bcImg-watch {
-    background-image: url(../../img/menu/watch.jpg);
-}
-
-.menuContImg__img_bcImg-bags {
-    background-image: url(../../img/menu/bags.jpg);
-}
-
-.menuContImg__img_bcImg-panama {
-    background-image: url(../../img/menu/panama.jpg);
-}
-
-.menuContImg__img_bcImg-saleAcc {
-    background-image: url(../../img/menu/accessories.jpg);
-}
-
-.menuContImg__img_bcImg-saleWom {
-    background-image: url(../../img/menu/women.jpg);
-}
-
-.menuContImg__img_bcImg-saleFoot {
-    background-image: url(../../img/menu/shoes.jpg);
-}
-
-.menuContImg__img_bcImg-saleMen {
-    background-image: url(../../img/menu/men.jpg);
-}
-
-
-.menuContImg__link {
+.menuContImg__span {
     text-transform: uppercase;
     font-size: w(12px);
     letter-spacing: w(1.6px);
     margin-top: w(14px);
+}
+
+.menuContImg__link {
+    width: 100%;
+}
+
+.menuContImg__img_bc-saucony {
+    background-image: url(../../img/menu/saucony.jpg);
+}
+
+.menuContImg__img_bc-reebok {
+    background-image: url(../../img/menu/reebok.jpg);
+}
+
+.menuContImg__img_bc-alpha {
+    background-image: url(../../img/menu/alpha.jpg);
+}
+
+.menuContImg__img_bc-cp {
+    background-image: url(../../img/menu/cp_company.jpg);
+}
+
+.menuContImg__img_bc-tnf {
+    background-image: url(../../img/menu/tnf.jpg);
+}
+
+.menuContImg__img_bc-lacoste {
+    background-image: url(../../img/menu/lacoste.jpg);
+}
+
+.menuContImg__img_bc-menClo {
+    background-image: url(../../img/menu/mens_clothing.jpg);
+}
+
+.menuContImg__img_bc-menFoot {
+    background-image: url(../../img/menu/mens_footwear.jpg);
+}
+
+.menuContImg__img_bc-womFoot {
+    background-image: url(../../img/menu/women_footwear.jpg);
+}
+
+.menuContImg__img_bc-womClo {
+    background-image: url(../../img/menu/woomen_clothing.jpg);
+}
+
+.menuContImg__img_bc-glas {
+    background-image: url(../../img/menu/glasses.jpg);
+}
+
+.menuContImg__img_bc-watch {
+    background-image: url(../../img/menu/watch.jpg);
+}
+
+.menuContImg__img_bc-bags {
+    background-image: url(../../img/menu/bags.jpg);
+}
+
+.menuContImg__img_bc-panama {
+    background-image: url(../../img/menu/panama.jpg);
+}
+
+.menuContImg__img_bc-saleAcc {
+    background-image: url(../../img/menu/accessories.jpg);
+}
+
+.menuContImg__img_bc-saleWom {
+    background-image: url(../../img/menu/women.jpg);
+}
+
+.menuContImg__img_bc-saleFoot {
+    background-image: url(../../img/menu/shoes.jpg);
+}
+
+.menuContImg__img_bc-saleMen {
+    background-image: url(../../img/menu/men.jpg);
 }

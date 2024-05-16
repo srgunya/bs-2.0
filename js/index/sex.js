@@ -11,6 +11,5 @@ function sexButton() {
         sex__block[i].onmouseenter = () => sex__shadow[i].style.opacity = .2;
         sex__block[i].onmouseleave = () => sex__shadow[i].style.opacity = 0;
     }
-
 }
 sexButton()
